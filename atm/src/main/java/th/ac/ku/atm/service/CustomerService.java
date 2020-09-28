@@ -50,7 +50,7 @@ public class CustomerService {
 //                return customer;
 //        }
         try {
-            return repository.findById(id);
+            return repository.findById(id).get();
         } catch (EmptyResultDataAccessException e) {
             return null;
         }
